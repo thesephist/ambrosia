@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/* RESET */
+html, body, div, input, p{margin: 0;padding: 0;box-sizing: border-box}h1, h2, h3{font-weight: normal}img{border: 0}body{font-family: "Roboto",sans-serif;-webkit-font-smoothing: antialiased}
+
+body {
+    background: url("/ambrosia/assets/background.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    background-attachment:fixed;
+    background-position:center center;
+}
+
+body::before {
+		content: "";
+    background: black;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+}
+
+#app-container {
+    width: 65%;
+    max-width: 800px;
+    margin: 32px auto;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    padding: 8px;
+    z-index: 3;
+    position: relative;
+}
+
+h1, h2 {
+    display: block;
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+h2 {
+    font-size: 16px;
+    color: grey;
+}
+
+#input-container {
+		height: 32px;
+		width: 100%;
+		clear: both;
+}
+
+input {
+		outline: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    transition: border-bottom 0.3s;
+    height: 32px;
+    float: left;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin: 0 4px;
+}
+
+input:focus {
+		border-bottom: 2px solid #fff;
+}
+
+#keyInput { width: calc(20% - 8px) }
+#contentInput { width: calc(70% - 8px) }
+
+#submit {
+		width: 10%;
+		float: left;
+		text-align: center;
+    line-height: 30px;
+    background: white;
+    color: black;
+    border-radius: 4px;
+		transition: background 0.3s, color 0.3s;
+		cursor: pointer;
+    height: 32px;
+    border: 2px solid black;
+}
+
+#submit:hover {
+    background: black;
+    color: white;
+}
+
+#submit:active {
+		opacity: 0.6;
+}
+
+#records-container {		
+	  margin: 8px 2px 0 2px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.record {
+		margin-bottom: 8px;
+		transition: color 0.3s;
+		cursor: pointer;
+}
+
+.record:hover {
+		color: #D02323;
+}
+
+.record b {
+		width: 100%;
+		display: block;
+}
+
+.record i {
+		display: block;
+		margin-left: 12px;
+		font-style: normal;
+}
+
+@media screen and (max-width:700px) {
+    body {
+        background:none;
+    }
+    body::before {
+        content:none;
+    }
+    #app-container {
+        width:100%;
+        border-radius:0;
+        margin:0;
+        box-shadow:none;
+    }
+    #records-container {
+        max-height:none;
+    }
+    #contentInput { width: calc(50% - 8px) }
+    #submit { width: 30% }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
